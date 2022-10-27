@@ -40,11 +40,7 @@ let diagonal2 = [linea1[3], linea2[1], linea3[0]]
 
 */
 
-
-
-
 // -----------------------------------------------------------------------------------
-
 
 // devuelve un nro entre 0 y un maximo (sin incluir el nro maximo)
 function generarNroAleatorio(maximo: number): number {
@@ -102,7 +98,8 @@ function lineaConSimbolosIguales(linea: string[]): boolean {
     return true
 }
 // ------------------------------------------------------------------------------------
-console.clear();
+// console.clear();
+console.log("INICIO PROGRAMA");
 let simbolosDisponibles: string[] = ["#", "@", "$"];
 
 
@@ -110,12 +107,16 @@ let dimensionMatriz: number = 3; // 3 ->  3x3 (3 filas x 3 columnas)
 
 let matriz: string[][] = generarMatrizCuadrada(dimensionMatriz);
 
+console.log("matriz generada");
 console.log(matriz);
 
 
 let cadena: string = presentacionMatriz(matriz);
 
+console.log("Presentacion matriz generada");
+
 console.log(cadena);
 
 console.log("linea del medio igual: " + lineaConSimbolosIguales(matriz[1]));
 
+console.log("FIN PROGRAMA");

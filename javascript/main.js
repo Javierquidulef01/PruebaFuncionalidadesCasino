@@ -86,11 +86,15 @@ function lineaConSimbolosIguales(linea) {
     return true;
 }
 // ------------------------------------------------------------------------------------
-console.clear();
+console.log("INICIO PROGRAMA");
+// console.clear();
 let simbolosDisponibles = ["#", "@", "$"];
 let dimensionMatriz = 3; // 3 ->  3x3 (3 filas x 3 columnas)
 let matriz = generarMatrizCuadrada(dimensionMatriz);
+console.log("matriz generada");
 console.log(matriz);
 let cadena = presentacionMatriz(matriz);
+console.log("Presentacion matriz generada");
 console.log(cadena);
 console.log("linea del medio igual: " + lineaConSimbolosIguales(matriz[1]));
+console.log("FIN PROGRAMA");
