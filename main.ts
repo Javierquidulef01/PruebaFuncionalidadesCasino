@@ -42,14 +42,16 @@ let diagonal2 = [linea1[3], linea2[1], linea3[0]]
 
 // -----------------------------------------------------------------------------------
 
-// devuelve un nro entre 0 y un maximo (sin incluir el nro maximo)
-function generarNroAleatorio(maximo: number): number {
-    return Math.floor(Math.random() * maximo);
+// devuelve un nro entre un minimo y un maximo (sin incluir el nro maximo)
+
+function generarNroAleatorioEntreRango(minimo:number, maximo:number):number{
+    let nroAleatorio:number = Math.floor(Math.random() * ((maximo - minimo) + 1) + minimo);
+    return nroAleatorio;
 }
 
 // devuelve un elemento al azar de un arreglo de string
 function obtenerElementoAlAzar(elementos: string[]): string {
-    let pos: number = generarNroAleatorio(elementos.length);
+    let pos: number = generarNroAleatorioEntreRango(0, elementos.length-1);
 
     return elementos[pos];
 }
