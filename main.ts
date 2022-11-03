@@ -42,7 +42,7 @@ let diagonal2 = [linea1[3], linea2[1], linea3[0]]
 
 // -----------------------------------------------------------------------------------
 
-// devuelve un nro entre un minimo y un maximo (sin incluir el nro maximo)
+// devuelve un nro aleatorio entre un minimo y un maximo (incluyendo ambos extremos)
 
 function generarNroAleatorioEntreRango(minimo:number, maximo:number):number{
     let nroAleatorio:number = Math.floor(Math.random() * ((maximo - minimo) + 1) + minimo);
