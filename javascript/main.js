@@ -40,13 +40,14 @@ let diagonal2 = [linea1[3], linea2[1], linea3[0]]
 
 */
 // -----------------------------------------------------------------------------------
-// devuelve un nro entre 0 y un maximo (sin incluir el nro maximo)
-function generarNroAleatorio(maximo) {
-    return Math.floor(Math.random() * maximo);
+// devuelve un nro aleatorio entre un minimo y un maximo (incluyendo ambos extremos)
+function generarNroAleatorioEntreRango(minimo, maximo) {
+    let nroAleatorio = Math.floor(Math.random() * ((maximo - minimo) + 1) + minimo);
+    return nroAleatorio;
 }
 // devuelve un elemento al azar de un arreglo de string
 function obtenerElementoAlAzar(elementos) {
-    let pos = generarNroAleatorio(elementos.length);
+    let pos = generarNroAleatorioEntreRango(0, elementos.length - 1);
     return elementos[pos];
 }
 // devuelve un arreglo de simbolos aleatorios donde la cantidad de simbolos se espera como parametro
@@ -86,8 +87,8 @@ function lineaConSimbolosIguales(linea) {
     return true;
 }
 // ------------------------------------------------------------------------------------
-console.log("INICIO PROGRAMA");
 // console.clear();
+console.log("INICIO PROGRAMA");
 let simbolosDisponibles = ["#", "@", "$"];
 let dimensionMatriz = 3; // 3 ->  3x3 (3 filas x 3 columnas)
 let matriz = generarMatrizCuadrada(dimensionMatriz);

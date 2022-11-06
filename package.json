@@ -5,9 +5,14 @@
   "main": "index.js",
   "scripts": {
     "main": "node ./javascript/main.js",
+    "menu": "node ./javascript/menu.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/readline-sync": "^1.4.4"
+  }
 }
